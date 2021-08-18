@@ -1,15 +1,26 @@
-#### `关注行业前沿，分享所见所学，持续输出优质文章 🚀;`
+## Hello, jokereven here! 🃏
 
-#### `未来可期 🏂;`
+- 🔭 GoReactTaro全栈攻城狮
+- 💬 微信: ZHOU125disorder
+- 💬 QQ: 3440681909
+- 📺 bilibili: [B站@jokereven的创业计划](https://space.bilibili.com/2104605936) | 抖音@jokereven的创业计划
+- 📚 CSDN: [CSDN@ZHOU125disorder](https://blog.csdn.net/ZHOU125disorder)
+- 🤔 知乎: [知乎@jokereven](https://www.zhihu.com/people/jokereven)
+- 👭 微信公众号: [公众号@JokerEven]
+- 📟 个人站点: [code520](http://code520.com.cn)
+- 📈 其它站点: [cmd](http://cmd.code520.com.cn) | [doc](http://doc.code520.com.cn)
 
-#### `您好！我是周靖（🏂JokerEven🏂），欢迎来到我的博客！`
+<img width="350px" height="165px" alt="GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=jokereven&count_private=true&show_icons=true"/>
 
-#### `我会定期发布一些大前端相关的前沿技术文章和日常开发过程中的实战总结。主要还是想和大家一起进步、一起成长。😜`
 
-#### `我开发的网站`
+<img width="350px" height="165px" alt="Most Used Lang" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jokereven&layout=compact"/>
 
-[`code520.com.cn💻`](http://code520.com.cn/)
+### 🛠 &nbsp;Tech Stack
+![Golang](https://img.shields.io/badge/-Golang-333333?style=flat&logo=go)
+![React](https://img.shields.io/badge/-React-333333?style=flat&logo=react)
+![Taro](https://img.shields.io/badge/-Taro-333333?style=flat&logo=taro)
+![JavaScript](https://img.shields.io/badge/-JavaScript-333333?style=flat&logo=javascript)
+![Node.js](https://img.shields.io/badge/-Node-333333?style=flat&logo=node.js)
 
-[`doc.code520.com.cn💻`](http://doc.code520.com.cn/)
-
-[`cmd.code520.com.cn💻`](http://cmd.code520.com.cn/)
+### 🤝🏻 &nbsp;Connect with Me
+<a href="mailto:zhou125disorder@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-zhou125disorder@gmail.com-blue?style=flat-square&logo=gmail"></a>
