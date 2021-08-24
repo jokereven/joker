@@ -1,6 +1,6 @@
-## 我是jokereven 🃏
+## Hey, jokereven here! 👋
 
-### 一名中国全栈程序员
+### My name is Jokerven, a new student in Wuhan Polytechnic University.
 - 🔭 技术栈: `GoReactTaro全栈攻城狮`
 - 💬 微信: `ZHOU125disorder`
 - 💬 QQ: `2178066226`
