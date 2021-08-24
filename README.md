@@ -1,6 +1,6 @@
 ## Hey, jokereven here! 👋
 
-### My name is Jokerven, a new student in Wuhan Polytechnic University.
+### My name is Jokerven, a new student in Wuhan Vocational and Technical College.
 - 🔭 技术栈: `GoReactTaro全栈攻城狮`
 - 💬 微信: `ZHOU125disorder`
 - 💬 QQ: `2178066226`
