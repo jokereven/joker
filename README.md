@@ -1,10 +1,10 @@
 ## 我是jokereven 🃏
 
 ### 一名中国全栈程序员
-- 🔭 GoReactTaro全栈攻城狮
-- 💬 微信: ZHOU125disorder
-- 💬 QQ: 2178066226
-- 📺 bilibili: [B站@jokereven的创业计划](https://space.bilibili.com/2104605936) \ 抖音@jokereven的创业计划
+- 🔭 技术栈: `GoReactTaro全栈攻城狮`
+- 💬 微信: `ZHOU125disorder`
+- 💬 QQ: `2178066226`
+- 📺 bilibili: [B站@jokereven的创业计划](https://space.bilibili.com/2104605936)  `抖音@jokereven的创业计划`
 - 📚 CSDN: [CSDN@ZHOU125disorder](https://blog.csdn.net/ZHOU125disorder)
 - 🤔 知乎: [知乎@jokereven](https://www.zhihu.com/people/jokereven)
 - 👭 微信公众号: [公众号@JokerEven]
