@@ -1,7 +1,7 @@
 ## Hey, jokereven here! 👋
 
 ### My name is Jokerven, a new student in Wuhan Vocational and Technical College.
-- 📌 技术栈: `Go 、Node、React`
+- 📌 技术栈: `Go、Node、React`
 - 💬 微信: `jokereven1215`
 - 💬 QQ: `2178066226`
 - 📺 bilibili: [B站@Joker-Even](https://space.bilibili.com/2104605936) and `抖音@jokereven`
