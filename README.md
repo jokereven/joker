@@ -1,1 +1,1 @@
-`create a community like bilibili.`
+create a community like bilibili.
