@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on jokereven</title>
-    <link>https://jokereven.github.io/posts/</link>
-    <description>Recent content in Posts on jokereven</description>
+    <title>Go on jokereven</title>
+    <link>https://jokereven.github.io/categories/go/</link>
+    <description>Recent content in Go on jokereven</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 16 Nov 2022 13:09:01 +0800</lastBuildDate><atom:link href="https://jokereven.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Network Environment</title>
-      <link>https://jokereven.github.io/2022/network-environment/</link>
-      <pubDate>Wed, 16 Nov 2022 13:09:01 +0800</pubDate>
-      
-      <guid>https://jokereven.github.io/2022/network-environment/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Wed, 16 Nov 2022 12:49:38 +0800</lastBuildDate><atom:link href="https://jokereven.github.io/categories/go/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Grpc Gateway</title>
       <link>https://jokereven.github.io/2022/grpc-gateway/</link>
@@ -24,15 +15,6 @@
       <guid>https://jokereven.github.io/2022/grpc-gateway/</guid>
       <description>grpc-gateway introduce gRPC-Gateway is a plugin of protoc. It reads a gRPC service definition and generates a reverse-proxy server which translates a RESTful JSON API into gRPC. This server is generated according to custom options in your gRPC definition.
 About The gRPC-Gateway is a plugin of the Google protocol buffers compiler protoc. It reads protobuf service definitions and generates a reverse-proxy server which translates a RESTful HTTP API into gRPC. This server is generated according to the google.</description>
-    </item>
-    
-    <item>
-      <title>HelloWorld</title>
-      <link>https://jokereven.github.io/2022/helloworld/</link>
-      <pubDate>Tue, 15 Nov 2022 23:08:31 +0800</pubDate>
-      
-      <guid>https://jokereven.github.io/2022/helloworld/</guid>
-      <description>HelloWorld</description>
     </item>
     
   </channel>

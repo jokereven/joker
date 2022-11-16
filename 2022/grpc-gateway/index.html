@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noodp" />
+  
+  <meta name="author" content="jokereven" />
+      
+  <link rel="prev" href="https://jokereven.github.io/2022/helloworld/" />
+   
+  <link rel="next" href="https://jokereven.github.io/2022/network-environment/" />
+  
+  <link rel="canonical" href="https://jokereven.github.io/2022/grpc-gateway/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>
+      Grpc Gateway | jokereven 
+  </title>
+  <meta
+    name="title"
+    content="Grpc Gateway | jokereven"
+  />
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+   
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/jokereven.github.io\/"
+    },
+    "articleSection" : "posts",
+    "name" : "Grpc Gateway",
+    "headline" : "Grpc Gateway",
+    "description" : "grpc-gateway introduce gRPC-Gateway is a plugin of protoc. It reads a gRPC service definition and generates a reverse-proxy server which translates a RESTful JSON API into gRPC. This server is generated according to custom options in your gRPC definition.\nAbout The gRPC-Gateway is a plugin of the Google protocol buffers compiler protoc. It reads protobuf service definitions and generates a reverse-proxy server which translates a RESTful HTTP API into gRPC. This server is generated according to the google.",
+    "inLanguage" : "en-us",
+    "author" : "jokereven",
+    "creator" : "jokereven",
+    "publisher": "jokereven",
+    "accountablePerson" : "jokereven",
+    "copyrightHolder" : "jokereven",
+    "copyrightYear" : "2022",
+    "datePublished": "2022-11-16 12:49:38 \u002b0800 \u002b0800",
+    "dateModified" : "2022-11-16 12:49:38 \u002b0800 \u002b0800",
+    "url" : "https:\/\/jokereven.github.io\/2022\/grpc-gateway\/",
+    "wordCount" : "974",
+    "keywords" : [ "Go","ms", "jokereven"]
+}
+</script>
+
+  <link
+    href="//use.fontawesome.com/releases/v5.9.0/css/all.css"
+    rel="stylesheet"
+  />
+</head>
+  
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://jokereven.github.io/">jokereven</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://jokereven.github.io/">jokereven</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Grpc Gateway</h1>
+        <div class="post-meta">
+           <i class="far fa-folder-open"></i>
+                <span class="post-category">
+                        <a href="https://jokereven.github.io/categories/go/"> Go </a>
+                        
+                </span>
+          <span class="post-time">
+         <i class="far fa-calendar-alt"></i>  <time datetime=2022-11-16 itemprop="datePublished">2022-11-16</time>
+           </span>
+         <i class="far fa-file-word"></i> <span class="post-word-count"> 974 字</span>
+         <i class="far fa-clock"></i> <span class="more-meta"> 5 分钟</span>
+        </div>
+    </header>
+        
+          <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title"></h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduce">introduce</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#docs">Docs</a></li>
+    <li><a href="#background">Background</a></li>
+    <li><a href="#basic-usage-examples">Basic Usage Examples</a>
+      <ul>
+        <li><a href="#use-protobuf-to-definition-grpc-service">Use protobuf to definition gRPC service</a></li>
+        <li><a href="#generate-code">Generate code</a></li>
+        <li><a href="#add-grpc-gateway-annotations-to-existing-proto-files">Add gRPC-Gateway annotations to existing proto files</a></li>
+        <li><a href="#generate-grpc-gateway-stubs">Generate gRPC-Gateway stubs</a></li>
+        <li><a href="#install-the-grpc-gateway-tool">Install the gRPC-Gateway tool</a></li>
+        <li><a href="#add-http-server-code">add HTTP Server code</a></li>
+        <li><a href="#references">references</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+<script type="text/javascript">
+  window.onload = function () {
+    var fix = $('.post-toc');
+    var end = $('.post-comment');
+    var fixTop = fix.offset().top, fixHeight = fix.height();
+    var endTop, miss;
+    var offsetTop = fix[0].offsetTop;
+    $(window).scroll(function () {
+      var docTop = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+      if (end.length > 0) {
+        endTop = end.offset().top;
+        miss = endTop - docTop - fixHeight;
+      }
+      if (fixTop < docTop) {
+        fix.css({ 'position': 'fixed' });
+        if ((end.length > 0) && (endTop < (docTop + fixHeight))) {
+          fix.css({ top: miss });
+        } else {
+          fix.css({ top: 0 });
+        }
+      } else {
+        fix.css({ 'position': 'absolute' });
+        fix.css({ top: offsetTop });
+      }
+    })
+  }
+</script> 
+
+        
+
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <h1 id="grpc-gateway">grpc-gateway</h1>
+<h2 id="introduce">introduce</h2>
+<p>gRPC-Gateway is a plugin of <a href="https://github.com/protocolbuffers/protobuf">protoc</a>. It reads a <a href="https://grpc.io/">gRPC</a> service definition and generates a reverse-proxy server which translates a RESTful JSON API into gRPC. This server is generated according to <a href="https://cloud.google.com/service-infrastructure/docs/service-management/reference/rpc/google.api#http">custom options</a> in your gRPC definition.</p>
+<h2 id="about">About</h2>
+<p>The gRPC-Gateway is a plugin of the Google protocol buffers compiler <a href="https://github.com/protocolbuffers/protobuf">protoc</a>. It reads protobuf service definitions and generates a reverse-proxy server which translates a RESTful HTTP API into gRPC. This server is generated according to the <a href="https://github.com/googleapis/googleapis/blob/master/google/api/http.proto#L46"><code>google.api.http</code></a> annotations in your service definitions.</p>
+<p>This helps you provide your APIs in both gRPC and RESTful style at the same time.</p>
+<p><img src="https://raw.githubusercontent.com/grpc-ecosystem/grpc-gateway/475b8d96f7d79887691fea8a550cc207ef5183b1/docs/assets/images/architecture_introduction_diagram.svg" alt="grpc-gateway"></p>
+<h2 id="docs">Docs</h2>
+<p>You can read our docs at:</p>
+<ul>
+<li><a href="https://grpc-ecosystem.github.io/grpc-gateway/">https://grpc-ecosystem.github.io/grpc-gateway/</a></li>
+</ul>
+<h2 id="background">Background</h2>
+<p>gRPC is great &ndash; it generates API clients and server stubs in many programming languages, it is fast, easy-to-use, bandwidth-efficient and its design is combat-proven by Google. However, you might still want to provide a traditional RESTful JSON API as well. Reasons can range from maintaining backward-compatibility, supporting languages or clients that are not well supported by gRPC, to simply maintaining the aesthetics and tooling involved with a RESTful JSON architecture.</p>
+<p>This project aims to provide that HTTP+JSON interface to your gRPC service. A small amount of configuration in your service to attach HTTP semantics is all that&rsquo;s needed to generate a reverse-proxy with this library.</p>
+<h2 id="basic-usage-examples">Basic Usage Examples</h2>
+<h3 id="use-protobuf-to-definition-grpc-service">Use protobuf to definition gRPC service</h3>
+<p>Create a new project greeter, Execute go mod init in project director to complete go module initialize.</p>
+<blockquote>
+<p>go mod init greeter</p>
+</blockquote>
+<p>In project director to create one proto file greeter/proto/hello_world/hello_world.proto</p>
+<pre tabindex="0"><code>syntax = &#34;proto3&#34;;
+
+package hello_world;
+
+option go_package=&#34;greeter/proto/hello_world&#34;;
+
+// defined one Greeter service
+service Greeter {
+  // Hello Method
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+}
+
+// defined request message
+message HelloRequest {
+  string name = 1;
+}
+
+// defined reply message
+message HelloReply {
+  string message = 1;
+}
+</code></pre><h3 id="generate-code">Generate code</h3>
+<pre tabindex="0"><code>$ protoc -I=proto \
+   --go_out=proto --go_opt=paths=source_relative \
+   --go-grpc_out=proto --go-grpc_opt=paths=source_relative \
+   hello_world/hello_world.proto
+</code></pre><p>Use go mod tidy to Solving the dependency problem.</p>
+<p>After generating pb and gRPC related codes, register the RPC service in the main function and start the gRPC Server.</p>
+<pre tabindex="0"><code>package main
+
+import (
+	&#34;context&#34;
+	&#34;log&#34;
+	&#34;net&#34;
+
+	&#34;google.golang.org/grpc&#34;
+
+	&#34;greeter/proto/hello_world&#34;
+)
+
+type server struct {
+	hello_world.UnimplementedGreeterServer
+}
+
+func NewServer() *server {
+	return &amp;server{}
+}
+
+func (s *server) SayHello(ctx context.Context, in *hello_world.HelloRequest) (*hello_world.HelloReply, error) {
+	return &amp;hello_world.HelloReply{Message: in.Name + &#34; world&#34;}, nil
+}
+
+func main() {
+	// Create a listener on TCP port
+	lis, err := net.Listen(&#34;tcp&#34;, &#34;:8080&#34;)
+	if err != nil {
+		log.Fatalln(&#34;Failed to listen:&#34;, err)
+	}
+
+	// create one gRPC server object
+	s := grpc.NewServer()
+	// register Greeter service to server
+	hello_world.RegisterGreeterServer(s, &amp;server{})
+	// start gRPC Server
+	log.Println(&#34;Serving gRPC on 0.0.0.0:8080&#34;)
+	log.Fatal(s.Serve(lis))
+}
+</code></pre><p>file tree</p>
+<pre tabindex="0"><code>.
+├── go.mod
+├── go.sum
+├── main.go
+└── proto
+    └── hello_world
+        ├── hello_world_grpc.pb.go
+        ├── hello_world.pb.go
+        └── hello_world.proto
+</code></pre><h3 id="add-grpc-gateway-annotations-to-existing-proto-files">Add gRPC-Gateway annotations to existing proto files</h3>
+<p>now we have a working Go gRPC server, Next you need to add the gRPC-Gateway annotation. These annotations define how gRPC services map to JSON requests and responses. When using protocol buffers, each RPC service must use the google.api.HTTP annotation to define the HTTP method and path.</p>
+<p>Therefore, we need to import google/api/http.proto into the proto file. We also need to add the required HTTP-&gt;gRPC mapping. In this example, we map POST /v1/hello_world/echo to a SayHello RPC.</p>
+<pre tabindex="0"><code>syntax = &#34;proto3&#34;;
+
+package hello_world;
+
+import &#34;google/api/annotations.proto&#34;;
+
+option go_package=&#34;greeter/proto/hello_world&#34;;
+
+// defined one Greeter service
+service Greeter {
+  // Hello Method
+  rpc SayHello (HelloRequest) returns (HelloReply) {
+    option(google.api.http) = {
+      post: &#34;/v1/hello_world/echo&#34;
+      body: &#34;*&#34;
+    };
+  }
+}
+
+// defined request message
+message HelloRequest {
+  string name = 1;
+}
+
+// defined reply message
+message HelloReply {
+  string message = 1;
+}
+</code></pre><h3 id="generate-grpc-gateway-stubs">Generate gRPC-Gateway stubs</h3>
+<h4 id="import-dependent-packages">Import dependent packages</h4>
+<p>Before we can use protoc to generate stubs, we need to copy some dependencies into our proto file structure. Copy a subset of googleapis from the <a href="https://github.com/googleapis/googleapis">official repository</a> into your local archetype file structure. The copied directory should look like this:</p>
+<pre tabindex="0"><code>.
+├── go.mod
+├── go.sum
+├── main.go
+└── proto
+    ├── google
+    │   └── api
+    │       ├── annotations.proto
+    │       └── http.proto
+    └── hello_world
+        ├── hello_world_grpc.pb.go
+        ├── hello_world.pb.go
+        └── hello_world.proto
+</code></pre><h3 id="install-the-grpc-gateway-tool">Install the gRPC-Gateway tool</h3>
+<blockquote>
+<p>go install github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-grpc-gateway@v2</p>
+</blockquote>
+<p>Now we need to add the gRPC-Gateway generator to the calling command of protoc:</p>
+<pre tabindex="0"><code>$ protoc -I=proto \
+   --go_out=proto --go_opt=paths=source_relative \
+   --go-grpc_out=proto --go-grpc_opt=paths=source_relative \
+   --grpc-gateway_out=proto --grpc-gateway_opt=paths=source_relative \
+   hello_world/hello_world.proto
+</code></pre><h3 id="add-http-server-code">add HTTP Server code</h3>
+<p>We also need to add and start the gRPC-Gateway mux in the main.go file. Modify our main function as shown in the code below.</p>
+<pre tabindex="0"><code>package main
+
+import (
+	&#34;context&#34;
+	&#34;log&#34;
+	&#34;net&#34;
+	&#34;net/http&#34;
+
+	&#34;greeter/proto/hello_world&#34;
+
+	&#34;github.com/grpc-ecosystem/grpc-gateway/v2/runtime&#34; // v2
+	&#34;google.golang.org/grpc&#34;
+	&#34;google.golang.org/grpc/credentials/insecure&#34;
+)
+
+type server struct {
+	hello_world.UnimplementedGreeterServer
+}
+
+func NewServer() *server {
+	return &amp;server{}
+}
+
+func (s *server) SayHello(ctx context.Context, in *hello_world.HelloRequest) (*hello_world.HelloReply, error) {
+	return &amp;hello_world.HelloReply{Message: in.Name + &#34; world&#34;}, nil
+}
+
+func main() {
+	// Create a listener on TCP port
+	lis, err := net.Listen(&#34;tcp&#34;, &#34;:8080&#34;)
+	if err != nil {
+		log.Fatalln(&#34;Failed to listen:&#34;, err)
+	}
+
+	// create one gRPC server object
+	s := grpc.NewServer()
+	// register Greeter service to server
+	hello_world.RegisterGreeterServer(s, &amp;server{})
+	// by 8080 to start gRPC Server
+	log.Println(&#34;Serving gRPC on 0.0.0.0:8080&#34;)
+	go func() {
+		log.Fatalln(s.Serve(lis))
+	}()
+
+	// Create a client connection to the gRPC server we just started
+	// gRPC-Gateway uses it to proxy requests (convert HTTP requests to RPC requests)
+	conn, err := grpc.DialContext(
+		context.Background(),
+		&#34;0.0.0.0:8080&#34;,
+		grpc.WithBlock(),
+		grpc.WithTransportCredentials(insecure.NewCredentials()),
+	)
+	if err != nil {
+		log.Fatalln(&#34;Failed to dial server:&#34;, err)
+	}
+
+	gwmux := runtime.NewServeMux()
+	// Register Greeter
+	err = hello_world.RegisterGreeterHandler(context.Background(), gwmux, conn)
+	if err != nil {
+		log.Fatalln(&#34;Failed to register gateway:&#34;, err)
+	}
+
+	gwServer := &amp;http.Server{
+		Addr:    &#34;:8090&#34;,
+		Handler: gwmux,
+	}
+	// 8090 prot provide gRPC-Gateway server
+	log.Println(&#34;Serving gRPC-Gateway on http://0.0.0.0:8090&#34;)
+	log.Fatalln(gwServer.ListenAndServe())
+}
+</code></pre><h4 id="notice">Notice</h4>
+<ul>
+<li>The imported &ldquo;github.com/grpc-ecosystem/grpc-gateway/v2/runtime&rdquo; is the v2 version.</li>
+<li>The gRPC service needs to be started with a separate goroutine.</li>
+</ul>
+<h4 id="start-server">start server</h4>
+<pre tabindex="0"><code>go run main.go
+</code></pre><h4 id="use-curl-to-send-http-request">use curl to send http request</h4>
+<pre tabindex="0"><code>curl -X POST -k http://localhost:8090/v1/hello_world/echo -d &#39;{&#34;name&#34;: &#34; hello&#34;}&#39;
+</code></pre><h4 id="get-message">get message</h4>
+<pre tabindex="0"><code>{&#34;message&#34;:&#34;hello world&#34;}
+</code></pre><h3 id="references">references</h3>
+<p><a href="https://www.liwenzhou.com/posts/Go/grpc-gateway/">https://www.liwenzhou.com/posts/Go/grpc-gateway/</a></p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>jokereven </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://jokereven.github.io/2022/grpc-gateway/>https://jokereven.github.io/2022/grpc-gateway/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://jokereven.github.io/tags/go/">
+                    #Go</a></span>
+            
+            <span class="tag"><a href="https://jokereven.github.io/tags/ms/">
+                    #ms</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://jokereven.github.io/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://jokereven.github.io/2022/helloworld/" class="prev" rel="prev" title="HelloWorld"><i class="iconfont icon-left"></i>&nbsp;HelloWorld</a>
+         
+        
+        <a href="https://jokereven.github.io/2022/network-environment/" class="next" rel="next" title="Network Environment">Network Environment&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+ <div class="post-comment">
+       
+             
+             
+       
+ </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2022 - 2022</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://jokereven.github.io/">jokereven</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>
