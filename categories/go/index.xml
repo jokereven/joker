@@ -6,7 +6,16 @@
     <description>Recent content in Go on jokereven</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 16 Nov 2022 12:49:38 +0800</lastBuildDate><atom:link href="https://jokereven.github.io/categories/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Nov 2022 10:44:45 +0800</lastBuildDate><atom:link href="https://jokereven.github.io/categories/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>gRPC</title>
+      <link>https://jokereven.github.io/2022/grpc/</link>
+      <pubDate>Thu, 17 Nov 2022 10:44:45 +0800</pubDate>
+      
+      <guid>https://jokereven.github.io/2022/grpc/</guid>
+      <description>only how to use install gRPC go get google.golang.org/grpc@latest install Protocol Buffers v3 Source install plugin of go go install google.golang.org/protobuf/cmd/protoc-gen-go@latest install grpc plugin go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest protocol-buffers 官方Go教程 check $ protoc --version libprotoc 3.21.8 $ protoc-gen-go --version protoc-gen-go v1.28.1 $ protoc-gen-go-grpc --version protoc-gen-go-grpc 1.2.0</description>
+    </item>
+    
     <item>
       <title>Grpc Gateway</title>
       <link>https://jokereven.github.io/2022/grpc-gateway/</link>

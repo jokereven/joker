@@ -8,11 +8,11 @@
   
   <meta name="author" content="jokereven" />
       
-  <link rel="prev" href="https://jokereven.github.io/2022/grpc-gateway/" />
+  <link rel="prev" href="https://jokereven.github.io/2022/block-chain/" />
    
-  <link rel="next" href="https://jokereven.github.io/2022/block-chain/" />
+  <link rel="next" href="https://jokereven.github.io/2022/development-environment/" />
   
-  <link rel="canonical" href="https://jokereven.github.io/2022/network-environment/" />
+  <link rel="canonical" href="https://jokereven.github.io/2022/grpc/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -21,11 +21,11 @@
   <meta name="msapplication-TileColor" content="#da532c" />
   <meta name="theme-color" content="#ffffff" />
   <title>
-      Network Environment | jokereven 
+      gRPC | jokereven 
   </title>
   <meta
     name="title"
-    content="Network Environment | jokereven"
+    content="gRPC | jokereven"
   />
     
   
@@ -43,9 +43,9 @@
          "@id": "https:\/\/jokereven.github.io\/"
     },
     "articleSection" : "posts",
-    "name" : "Network Environment",
-    "headline" : "Network Environment",
-    "description" : "",
+    "name" : "gRPC",
+    "headline" : "gRPC",
+    "description" : "only how to use install gRPC go get google.golang.org\/grpc@latest install Protocol Buffers v3 Source install plugin of go go install google.golang.org\/protobuf\/cmd\/protoc-gen-go@latest install grpc plugin go install google.golang.org\/grpc\/cmd\/protoc-gen-go-grpc@latest protocol-buffers 官方Go教程 check $ protoc --version libprotoc 3.21.8 $ protoc-gen-go --version protoc-gen-go v1.28.1 $ protoc-gen-go-grpc --version protoc-gen-go-grpc 1.2.0",
     "inLanguage" : "en-us",
     "author" : "jokereven",
     "creator" : "jokereven",
@@ -53,11 +53,11 @@
     "accountablePerson" : "jokereven",
     "copyrightHolder" : "jokereven",
     "copyrightYear" : "2022",
-    "datePublished": "2022-11-16 13:09:01 \u002b0800 \u002b0800",
-    "dateModified" : "2022-11-16 13:09:01 \u002b0800 \u002b0800",
-    "url" : "https:\/\/jokereven.github.io\/2022\/network-environment\/",
-    "wordCount" : "0",
-    "keywords" : [ "", "jokereven"]
+    "datePublished": "2022-11-17 10:44:45 \u002b0800 \u002b0800",
+    "dateModified" : "2022-11-17 10:44:45 \u002b0800 \u002b0800",
+    "url" : "https:\/\/jokereven.github.io\/2022\/grpc\/",
+    "wordCount" : "50",
+    "keywords" : [ "gRPC","Go", "jokereven"]
 }
 </script>
 
@@ -117,18 +117,18 @@
       		
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">Network Environment</h1>
+        <h1 class="post-title" itemprop="name headline">gRPC</h1>
         <div class="post-meta">
            <i class="far fa-folder-open"></i>
                 <span class="post-category">
-                        <a href="https://jokereven.github.io/categories/">  </a>
+                        <a href="https://jokereven.github.io/categories/go/"> Go </a>
                         
                 </span>
           <span class="post-time">
-         <i class="far fa-calendar-alt"></i>  <time datetime=2022-11-16 itemprop="datePublished">2022-11-16</time>
+         <i class="far fa-calendar-alt"></i>  <time datetime=2022-11-17 itemprop="datePublished">2022-11-17</time>
            </span>
-         <i class="far fa-file-word"></i> <span class="post-word-count"> 0 字</span>
-         <i class="far fa-clock"></i> <span class="more-meta"> 0 分钟</span>
+         <i class="far fa-file-word"></i> <span class="post-word-count"> 50 字</span>
+         <i class="far fa-clock"></i> <span class="more-meta"> 1 分钟</span>
         </div>
     </header>
         
@@ -136,7 +136,15 @@
   <h2 class="post-toc-title"></h2>
   
   <div class="post-toc-content always-active">
-    <nav id="TableOfContents"></nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#install-grpc">install gRPC</a></li>
+    <li><a href="#install-protocol-buffers-v3">install Protocol Buffers v3</a></li>
+    <li><a href="#install-plugin-of-go">install plugin of go</a></li>
+    <li><a href="#install-grpc-plugin">install grpc plugin</a></li>
+    <li><a href="#check">check</a></li>
+  </ul>
+</nav>
   </div>
 </div>
 <script type="text/javascript">
@@ -185,7 +193,28 @@
           
           
 
-          
+          <blockquote>
+<p>only how to use</p>
+</blockquote>
+<h2 id="install-grpc">install gRPC</h2>
+<pre tabindex="0"><code>go get google.golang.org/grpc@latest
+</code></pre><h2 id="install-protocol-buffers-v3">install Protocol Buffers v3</h2>
+<p><a href="https://github.com/protocolbuffers/protobuf/releases">Source</a></p>
+<h2 id="install-plugin-of-go">install plugin of go</h2>
+<pre tabindex="0"><code>go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+</code></pre><h2 id="install-grpc-plugin">install grpc plugin</h2>
+<pre tabindex="0"><code>go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
+</code></pre><p><a href="https://developers.google.com/protocol-buffers/docs/gotutorial">protocol-buffers 官方Go教程</a></p>
+<h2 id="check">check</h2>
+<pre tabindex="0"><code>$ protoc --version
+libprotoc 3.21.8
+
+$ protoc-gen-go --version
+protoc-gen-go v1.28.1
+
+$ protoc-gen-go-grpc --version
+protoc-gen-go-grpc 1.2.0
+</code></pre>
     </div>
 
     <div class="post-copyright">
@@ -199,7 +228,7 @@
              
             <p class="copyright-item">
                     <span>Link:</span>
-                    <a href=https://jokereven.github.io/2022/network-environment/>https://jokereven.github.io/2022/network-environment/</span>
+                    <a href=https://jokereven.github.io/2022/grpc/>https://jokereven.github.io/2022/grpc/</span>
             </p>
             
              
@@ -215,8 +244,11 @@
             <section>
             <i class="iconfont icon-tag"></i>Tag(s): 
             
-            <span class="tag"><a href="https://jokereven.github.io/tags//">
-                    #</a></span>
+            <span class="tag"><a href="https://jokereven.github.io/tags/grpc/">
+                    #gRPC</a></span>
+            
+            <span class="tag"><a href="https://jokereven.github.io/tags/go/">
+                    #Go</a></span>
             
             </section>
         
@@ -228,10 +260,10 @@
 
     <div class="post-nav">
         
-        <a href="https://jokereven.github.io/2022/grpc-gateway/" class="prev" rel="prev" title="Grpc Gateway"><i class="iconfont icon-left"></i>&nbsp;Grpc Gateway</a>
+        <a href="https://jokereven.github.io/2022/block-chain/" class="prev" rel="prev" title="Block Chain"><i class="iconfont icon-left"></i>&nbsp;Block Chain</a>
          
         
-        <a href="https://jokereven.github.io/2022/block-chain/" class="next" rel="next" title="Block Chain">Block Chain&nbsp;<i class="iconfont icon-right"></i></a>
+        <a href="https://jokereven.github.io/2022/development-environment/" class="next" rel="next" title="Development Environment">Development Environment&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 
