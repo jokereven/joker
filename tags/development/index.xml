@@ -16,7 +16,11 @@
       <description>vscode setting settings.json
 vscode key binding keybindings.json
 .zshrc in wsl of arch .zshrc
-dotfiles dotfiles</description>
+dotfiles dotfiles
+Go https://github.com/voidint/g
+Node linux: https://github.com/nvm-sh/nvm
+windows: https://github.com/coreybutler/nvm-windows
+more loading&amp;hellip;</description>
     </item>
     
   </channel>

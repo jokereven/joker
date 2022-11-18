@@ -16,7 +16,20 @@
       <description>vscode setting settings.json
 vscode key binding keybindings.json
 .zshrc in wsl of arch .zshrc
-dotfiles dotfiles</description>
+dotfiles dotfiles
+Go https://github.com/voidint/g
+Node linux: https://github.com/nvm-sh/nvm
+windows: https://github.com/coreybutler/nvm-windows
+more loading&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Network Environment</title>
+      <link>https://jokereven.github.io/2022/network-environment/</link>
+      <pubDate>Wed, 16 Nov 2022 13:09:01 +0800</pubDate>
+      
+      <guid>https://jokereven.github.io/2022/network-environment/</guid>
+      <description>Network Environment 推荐阅读 如何选择适合的公共 DNS？ [2020] 我有特别的 DNS 配置和使用技巧 Clash for Windows 教程 | 可能是 Windows 上最好用的代理工具 科学上网的方式 vpn 虚拟私人网络（英语：</description>
     </item>
     
   </channel>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>network on jokereven</title>
+    <link>https://jokereven.github.io/categories/network/</link>
+    <description>Recent content in network on jokereven</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 16 Nov 2022 13:09:01 +0800</lastBuildDate><atom:link href="https://jokereven.github.io/categories/network/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Network Environment</title>
+      <link>https://jokereven.github.io/2022/network-environment/</link>
+      <pubDate>Wed, 16 Nov 2022 13:09:01 +0800</pubDate>
+      
+      <guid>https://jokereven.github.io/2022/network-environment/</guid>
+      <description>Network Environment 推荐阅读 如何选择适合的公共 DNS？ [2020] 我有特别的 DNS 配置和使用技巧 Clash for Windows 教程 | 可能是 Windows 上最好用的代理工具 科学上网的方式 vpn 虚拟私人网络（英语：</description>
+    </item>
+    
+  </channel>
+</rss>

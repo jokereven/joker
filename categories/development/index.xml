@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>env on jokereven</title>
-    <link>https://jokereven.github.io/categories/env/</link>
-    <description>Recent content in env on jokereven</description>
+    <title>development on jokereven</title>
+    <link>https://jokereven.github.io/categories/development/</link>
+    <description>Recent content in development on jokereven</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 17 Nov 2022 17:25:27 +0800</lastBuildDate><atom:link href="https://jokereven.github.io/categories/env/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Nov 2022 17:25:27 +0800</lastBuildDate><atom:link href="https://jokereven.github.io/categories/development/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Development Environment</title>
       <link>https://jokereven.github.io/2022/development-environment/</link>
@@ -16,7 +16,11 @@
       <description>vscode setting settings.json
 vscode key binding keybindings.json
 .zshrc in wsl of arch .zshrc
-dotfiles dotfiles</description>
+dotfiles dotfiles
+Go https://github.com/voidint/g
+Node linux: https://github.com/nvm-sh/nvm
+windows: https://github.com/coreybutler/nvm-windows
+more loading&amp;hellip;</description>
     </item>
     
   </channel>
